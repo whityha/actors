@@ -1,0 +1,47 @@
+@import '../../styles/varibales'
+.posters
+    background: var(--black)
+    padding: 54px 0px 54px 0px
+    &_header
+        display: flex
+        color: var(--white)
+        margin-bottom: 34px
+        align-items: center
+        justify-content: space-between
+        &_title
+            font-weight: normal
+            letter-spacing: 1px
+    &_btn
+        border: none
+        outline: none
+        flex-basis: 20%
+        flex-shrink: 1
+        background: grey
+        height: 10px
+        &.prev
+            background: url(/assets/icons/arrow_left.svg) no-repeat center left            
+        &.next
+            background: url(/assets/icons/arrow_right.svg) no-repeat center right
+        &.prev,
+        &.next
+            cursor: pointer
+            transition: .2s
+    @media (min-width: $media-small)
+        padding: 54px 0px 54px 0px
+        &_header
+            &_title
+                font-size: 32px
+    @media (min-width: $media-medium)
+        &_header
+            margin-bottom: 48px
+        &_btn
+            &.prev,
+            &.next
+                &:hover
+                    transform: translateY(-5px)
+    @media (min-width: $media-large)
+        padding: 80px 0px 80px 0px
+    @media (min-width: $media-max)
+        &_header
+            margin-bottom: 62px
+        padding: 100px 0px 110px 0px

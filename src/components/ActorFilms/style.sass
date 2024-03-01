@@ -1,0 +1,143 @@
+@import '../../styles/varibales.sass'
+.description
+    background: linear-gradient(90deg, var(--black) 50%, rgba(255,255,255,1) 50%)
+    &_content
+        display: flex
+    &_films
+        flex-basis: 50%
+        color: var(--white)
+        &-title
+            font-size: 46px
+            font-weight: 400
+            letter-spacing: 3px
+            margin-top: 50px
+            margin-bottom: 30px
+        &-list
+            padding-right: 50px
+            margin-bottom: 50px
+        &-item
+            display: flex
+            justify-content: space-between
+            align-items: center
+            padding: 20px 40px
+            border-top: 1px solid #FFFFFE80
+            &:last-child
+                border-bottom: 1px solid #FFFFFE80
+        &-year
+            font-size: 28px
+            color: #FFFFFE80
+            letter-spacing: 1px
+            padding-right: 30px
+        &-items
+            display: flex
+            flex-direction: column
+            align-items: flex-end
+            row-gap: 15px
+        &-film
+            font-family: var(--font-f-secondary)
+            font-size: 16px
+            font-weight: 400
+            letter-spacing: .5px
+            text-align: right
+    &_hobby
+        flex-basis: 50%
+        padding-left: 50px
+        &-item
+            border-top: 1px solid #0A0A0A50
+            padding: 15px 40px
+            font-family: var(--font-f-secondary)
+            font-size: 18px
+            line-height: 2
+            &:last-child
+                border-bottom: 1px solid #0A0A0A50
+    @media (max-width: calc($media-max - 1px))
+        &_films
+            &-title
+                font-size: 40px
+            &-year
+                font-size: 24px
+            &-film
+                font-size: 14px
+        &_hobby
+            &-item
+                font-size: 16px
+    @media (max-width: calc($media-big - 1px))
+        &_films
+            &-title
+                font-size: 32px
+            &-year
+                font-size: 20px
+            &-film
+                font-size: 12px
+            &-item
+                padding: 14px 30px
+        &_hobby
+            &-item
+                font-size: 13px
+    @media (max-width: calc($media-large - 1px))
+        &_films
+            &-title
+                font-size: 40px
+                margin-top: 40px
+                margin-bottom: 20px
+            &-year
+                font-size: 16px
+            &-film
+                font-size: 14px
+                font-weight: 100
+                line-height: 16px
+                letter-spacing: 1px
+            &-item
+                padding: 14px 30px
+            &-items
+                row-gap: 8px
+        &_hobby
+            &-item
+                font-size: 16px
+    @media (max-width: calc($media-medium - 1px))
+        &_films
+            &-title
+                font-size: 32px
+                margin-top: 32px
+                margin-bottom: 16px
+            &-year
+                font-size: 14px
+            &-list
+                padding-right: 20px
+            &-film
+                font-size: 12px
+                font-weight: 100
+                line-height: 16px
+                letter-spacing: 1px
+            &-item
+                padding: 15px
+            &-items
+                row-gap: 6px
+        &_hobby
+            padding-left: 20px
+            &-item
+                font-size: 12px
+                padding: 15px 15px
+    @media (max-width: calc($media-small - 1px))
+        background: none
+        &_content
+            flex-direction: column
+            width: 100%
+        &_films
+            background: var(--black)
+            display: flex
+            flex-direction: column
+            align-items: center
+            &-title
+                width: $wrapper_width
+                text-align: center
+            &-list
+                padding: 0
+                width: 100%
+            &-item
+                font-size: 12px
+                padding: 15px calc(50% - $wrapper_width / 2)
+        &_hobby
+            padding: 0
+            &-item
+                padding: 15px calc(50% - $wrapper_width / 2)

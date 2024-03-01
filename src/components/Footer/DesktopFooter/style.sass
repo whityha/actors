@@ -1,0 +1,85 @@
+@import '../../../styles/varibales'
+.footer    
+    color: var(--white)
+    margin-top: -15px
+    &_container
+        background: var(--black)
+        padding: 47px 0px 32px 0px
+    &_top
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &_phone
+        font-family: var(--font-f-secondary)
+        border-bottom: 1px solid var(--white)
+    &_icon_phone
+        width: 24px
+        height: 24px
+        background: url('../../../assets/phone.svg') no-repeat center center / 100%
+        &-link
+            display: block
+            width: 100%
+            height: 100%
+    &_nav
+        &-list
+            display: flex
+            justify-content: space-between
+            column-gap: 30px
+            letter-spacing: 1px
+    &_social
+        display: flex
+        justify-content: space-between
+        font-family: var(--font-f-secondary)
+        margin-top: 30px
+        font-weight: 300
+        font-size: 14px
+        line-height: 24px
+        letter-spacing: .5px
+        align-items: center
+    &_button
+        display: flex
+        justify-content: center
+        background: transparent
+        color: var(--white)
+        font-family: var(--font-f-main)
+        font-size: 12px
+        padding: 9px 15px
+        border: 1px solid var(--white)
+        letter-spacing: 1.3px
+    &_design
+        padding: 20px 0px
+        font-family: var(--font-f-main)
+        background: var(--white)
+        color: var(--black)
+        &-text
+            text-align: center
+        &-link
+            text-decoration: underline
+    @media (min-width: $media-small)
+        &_phone
+            display: none
+    @media (min-width: $media-medium)
+        &_phone
+            display: block
+        &_icon_phone
+            display: none
+    @media (min-width: $media-large)
+        &_social
+            margin-top: 60px
+            margin-bottom: 20px
+    @media (min-width: $media-big)
+        &_nav
+            &-list
+                font-size: 16px
+                column-gap: 40px
+    @media (min-width: $media-max)
+        &_phone
+            font-size: 21px
+        &_nav
+            &-list
+                font-size: 18px
+                column-gap: 50px
+        &_social
+            font-size: 18px
+        &_button
+            font-size: 18px

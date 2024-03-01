@@ -1,0 +1,35 @@
+.popup
+    z-index: 100
+    position: fixed
+    top: 0
+    left: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100vw
+    height: 100vh
+    background: rgba(0, 0, 0, 0.4)
+    backdrop-filter: blur(5px)
+    &.entering
+        animation: opac .4s cubic-bezier(0, 0, 0.2, 1) forwards
+    &.exiting
+        animation: opac .4s cubic-bezier(0, 0, 0.2, 1) reverse forwards
+    &_inner
+        &.entering
+            animation: show .4s cubic-bezier(0, 0, 0.2, 1) forwards
+        &.exiting
+            animation: show .4s cubic-bezier(0.4, 0, 1, 1) reverse forwards
+
+@keyframes show
+    0%
+        transform: translateY(-60px)
+        opacity: 0
+    100%
+        opacity: 1
+        transform: translateY(0)
+
+@keyframes opac
+    0%
+        opacity: 0
+    100%
+        opacity: 1

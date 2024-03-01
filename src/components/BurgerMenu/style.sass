@@ -1,0 +1,95 @@
+@import '../../styles/varibales'
+.burger_menu
+    position: fixed
+    display: flex
+    flex-direction: column
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    z-index: 10
+    background: var(--black)
+    transform: translateY(-100%)
+    transition: .2s
+    &.active
+        transform: translateY(0)
+
+.burger
+    display: flex
+    justify-content: center
+    align-items: center
+    background: var(--white)
+    padding-top: 24px
+    &.dark
+        background: var(--black)
+    &_burger
+        width: 30px
+        height: 24px
+        margin-right: auto
+        background: url('../../assets/X_light.svg') no-repeat center center / 100%
+        &.dark
+            background: url('../../assets/X_light.svg') no-repeat center center / 100%
+    &_nav
+        display: flex
+        flex-direction: column
+        align-items: center
+        width: 100%
+        height: 100%
+        margin-right: auto
+        row-gap: 20px
+        &_list
+            display: flex
+            align-items: center
+            flex-direction: column
+            row-gap: 30px
+            margin-top: 100px
+        &_item
+            color: white
+            letter-spacing: 1.5px
+            font-size: 28px
+
+    &_logo        
+        margin-right: auto
+
+    &_phone
+        display: block
+        color: white
+        font-family: var(--font-f-secondary)
+        &-link
+            margin-top: auto
+        &-email
+            font-weight: 100
+    &_phone_icon
+        display: block
+        width: 24px
+        height: 24px
+        background: url('../../assets/phone_light.svg') no-repeat center center / 100%
+        &.dark
+            background: url('../../assets/phone.svg') no-repeat center center / 100%
+        &-link
+            display: block
+            width: 100%
+            height: 100%
+        a
+            display: block
+            height: 100%
+    @media (min-width: $media-small)
+        &_nav
+            display: block
+        &_burger
+            display: none
+    @media (min-width: $media-medium)
+        &_phone
+            display: block
+        &_phone_icon
+            display: none
+    @media (min-width: $media-big)
+        padding-top: 32px
+    @media (min-width: $media-max)
+        &_nav
+            &_list
+                column-gap: 50px
+            &_item
+                font-size: 20px
+        &_phone
+            font-size: 20px

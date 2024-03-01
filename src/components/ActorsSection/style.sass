@@ -1,0 +1,53 @@
+@import '../../styles/varibales'
+    
+.actors
+    padding: 55px 0px 70px 0px
+    &_content
+        display: flex
+        flex-direction: column
+    &_header
+        display: flex
+        flex-direction: column
+    &_title
+        color: var(--grey)
+        font-size: 20px
+        letter-spacing: 1px
+        font-weight: 500
+    &_loader
+        justify-content: center
+        margin-top: 40px
+    &_subtext
+        font-family: var(--font-f-secondary)
+        font-size: 14px
+        line-height: 24px   
+        margin-bottom: 25px
+        margin-top: 10px
+    @media (min-width: $media-small)
+        &_content
+            flex-direction: row
+            padding-bottom: 20px
+        &_list
+            margin-top: 20px
+        &_container
+            flex-grow: 1
+            margin-left: 50px
+        &_subtext
+            margin: 0
+        &_image
+            max-height: none
+    @media (min-width: $media-medium)
+        &_subtext
+            font-size: 16px            
+    @media (min-width: $media-big)
+        &_title
+            font-size: 24px
+        &_container
+            margin-left: 150px
+    @media (min-width: $media-max)
+        padding-top: 120px
+        &_list
+            margin-top: 30px
+        &_title
+            font-size: 30px
+        &_subtext
+            font-size: 18px  

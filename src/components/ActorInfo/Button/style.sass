@@ -1,0 +1,24 @@
+@import '../../../styles/varibales.sass'
+
+.button_work
+    display: inline-block
+    width: 112px
+    aspect-ratio: 1
+    background: url('../../../assets/button_work.svg') no-repeat center center / 100%
+    animation: rot 25s infinite linear
+    cursor: pointer
+    &:hover
+        animation-play-state: paused
+    @media (max-width: calc($media-max - 1px)) 
+        width: 96px
+    @media (max-width: calc($media-big - 1px)) 
+        width: 80px
+    @media (max-width: calc($media-medium - 1px)) 
+        width: 64px
+
+@keyframes rot
+    0%
+        transform: rotate(0)
+    100%
+        transform: rotate(360deg)
+        

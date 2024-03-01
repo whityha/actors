@@ -1,0 +1,69 @@
+@import '../../../../styles/varibales'
+.actors_mobile
+    &_list
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+    &_person
+        width: 100%
+        display: flex
+        position: relative
+        font-family: var(--font-f-secondary)
+        font-size: 14px
+        line-height: 24px
+        padding: 12px 5px 12px 50%
+        border-bottom: 1px solid var(--grey)
+        &:last-child
+            .actors_mobile_image
+                top: auto
+                bottom: 10px
+        &:nth-last-child(2),
+        &:nth-last-child(3)
+            .actors_mobile_image
+                top: auto
+                bottom: 10px      
+        &:first-child
+            border-top: 1px solid var(--grey)
+        &.active
+            text-shadow: 1px 1px 3px var(--yellow)
+    &_link
+        display: flex
+        span
+            display: block
+            margin-left: auto
+    &_image
+        position: absolute
+        right: 54vw
+        top: 10px
+        width: 32vw
+        object-fit: contain
+        aspect-ratio: 1/1.28
+        border-radius: 8px
+        z-index: 2
+        animation: actorMobileImageTransform .2s forwards
+    @media (min-width: $media-small)
+        &_person
+            font-size: 16px
+        &_image
+            right: 40vw
+            max-width: 250px
+            border-radius: 12px
+        &_list
+            margin-top: 20px
+    @media (min-width: $media-medium)
+        &_image
+            right: 45vw
+            border-radius: 14px
+        &_person
+            font-size: 20px
+            padding: 20px 10px 20px 50%
+            span
+                width: 250px
+
+@keyframes actorMobileImageTransform
+    0%
+        opacity: 0
+        transform: translateY(-15px)
+    100%
+        opacity: 1
+        transform: translateY(0px)

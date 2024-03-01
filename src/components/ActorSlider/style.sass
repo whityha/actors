@@ -1,0 +1,54 @@
+@import '../../styles/varibales.sass'
+.slider
+    padding: 110px 0px
+    &_prev,
+    &_next
+        width: 50px
+        height: 20px
+        transition: transform .2s
+    &_prev
+        background: url('../../assets/arrow_left_black.svg') no-repeat center left
+        &:hover
+            transform: translateX(-10px)
+    &_next
+        background: url('../../assets/arrow_right_black.svg') no-repeat center right
+        &:hover
+            transform: translateX(10px)
+    &_container
+        display: flex
+        justify-content: space-between
+        align-items: center
+        &_slider
+            width: $ACTOR_SLIDER_WIDTH
+    &_image_block
+        display: block !important
+        max-width: 95%
+        margin: 0 auto
+        border-radius: 20px
+        overflow: hidden
+    &_image
+        width: 100%
+        object-fit: contain
+    &_dots
+        display: flex !important
+        align-items: center
+        margin-top: 50px
+        width: 100%        
+        li
+            flex-grow: 1
+    @media (max-width: calc($media-medium - 1px))
+        padding: 60px 0px
+        &_prev,
+        &_next
+            width: 27px
+            height: 20px
+            transition: transform .2s
+    @media (max-width: calc($media-small - 1px))
+        overflow-x: hidden
+        .slick-list
+            overflow: visible
+        &_container
+            justify-content: center
+        &_prev,
+        &_next
+            display: none

@@ -1,0 +1,31 @@
+@import '../../styles/varibales.sass'
+
+.video
+    &_container
+        width: $ACTOR_SLIDER_WIDTH
+        margin: 0 auto
+    &_labels
+        display: flex
+        column-gap: 40px
+        margin-bottom: 30px
+    &_label
+        font-size: 40px
+        letter-spacing: 1px
+        color: var(--grey)
+        cursor: pointer
+        &.active
+            color: var(--black)
+    &_content
+        border-radius: 28px
+        width: 100%
+        overflow: hidden
+        aspect-ratio: 974 / 536
+        margin-bottom: 110px
+    @media (max-width: calc($media-small - 1px))
+        &_container
+            width: 100%
+        &_label
+            font-size: 24px
+        &_content
+            aspect-ratio: 272/152
+            margin-bottom: 60px
